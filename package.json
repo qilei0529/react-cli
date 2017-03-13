@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "2d": "bin/scion"
+    "scion": "bin/scion"
   },
   "keywords": [
     "tool"
