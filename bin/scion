@@ -12,11 +12,35 @@ program
     .usage('<command>')
 
 program
-    .command('create')
+    .command('init')
     .description('Create a new project')
-    .alias('c')
+    .alias('i')
+    .action(() => {
+        require('../command/init')()
+    })
+
+program
+    .command('add')
+    .description('Add a new project')
+    .alias('a')
     .action(() => {
         require('../command/add')()
+    })
+    
+program
+    .command('delete')
+    .description('Delete a template')
+    .alias('d')
+    .action(() => {
+        require('../command/delete')()
+    })
+
+program
+    .command('list')
+    .description('List project')
+    .alias('l')
+    .action(() => {
+        require('../command/list')()
     })
 
 program
